@@ -9,15 +9,15 @@ int main(int argc, char *argv[]){
         int n = strlen(argv[2]);
         char* x = argv[1];
         char* y = argv[2];
-        int c[m][n];
-        for (i = 0; i < m; i++){
+        int c[m+1][n+1];
+        for (i = 0; i < m+1; i++){
             c[i][0] = 0;
         }
-        for (j = 0; j < n; j++){
+        for (j = 0; j < n+1; j++){
             c[0][j] = 0;
         }
-        for (i = 1; i < m; i++){
-            for ( j = 1; j < n; j++){
+        for (i = 1; i < m+1; i++){
+            for ( j = 1; j < n+1; j++){
                 if (x[i-1] == y[j-1]){
                     c[i][j] = c[i-1][j-1] + 1;
                 }else if(c[i-1][j] >= c[i][j-1]){
@@ -28,13 +28,8 @@ int main(int argc, char *argv[]){
             }
         }
         
-        for (i = 0; i < m; i++){
-            for ( j = 0; j < n; j++){
-                printf("%d ",c[i][j]);
-            }
-            printf("\n");
-        }
         
+        printf("%d \n",c[m][n]);
         
     }
     
