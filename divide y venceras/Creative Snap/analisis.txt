@@ -21,3 +21,6 @@ o los arreglos generados por la división.
 Finalmente este análisis se detiene cuando el arreglo solo tenga un valor, debido a que no se puede dividir mas.
 
 Aquí se cumple otra condición para ser divide y vencerás el ser recursivo.
+
+De acuerdo con el analisis este algoritmo es
+O(k*(2^(n+1)-1)
