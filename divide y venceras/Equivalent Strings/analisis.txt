@@ -11,6 +11,7 @@ Dos cadena son equivalentes si
 Analisis:
 El problema parece ser un divide y venceras, como se puede ver se tienen 3 subproblemas para saber si las cadenas son
 equivalentes, si se cumple una de estas condiciones la cadena es equivalente si cumple una de las condiciones. Sin embargo
-existe una restriccion para la candicion 2 y 3, cuando una cadena tiene longitud imṕar debido a que no se pueden dividir.
+existe una restriccion para la condicion 2 y 3, cuando una cadena tiene longitud imṕar debido a que no se pueden dividir.
 Para la condicion 2 y 3 es necesario aplicar recursividad debido a que las subcadenas que se analizan en estas condiciones
 se analizan de la misma forma que la cadena original.
+
