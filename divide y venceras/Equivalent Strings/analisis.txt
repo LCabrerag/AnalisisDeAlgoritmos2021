@@ -15,3 +15,5 @@ existe una restriccion para la condicion 2 y 3, cuando una cadena tiene longitud
 Para la condicion 2 y 3 es necesario aplicar recursividad debido a que las subcadenas que se analizan en estas condiciones
 se analizan de la misma forma que la cadena original.
 
+Este algoritmo es Omicron(n*log(n))
+y tiene la forma recursiva T(n) = 2T(n/2) + n/2
