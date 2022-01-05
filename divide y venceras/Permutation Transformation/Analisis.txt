@@ -9,3 +9,20 @@ La salida es n numeros que indican la altura de cada numero en el arbol binario 
 
 
 Analisis:
+Este problema se puede dvidir en 2 subproblemas
+los valores de la separacion izquierda y la separacion derecha
+la ventaja de manejarlo de esta forma es que al momento de imprimir los valores de las separaciones
+se mantiene el orden de los numeros de la entrada cuando se imprime los valores del segmento izquierdo
+seguido del valor del numero actual y finalmente los valores del segmento derecho.
+Otro paso importante es como aplicar el concepto de "valores" en cada segmento. Cuando se empieza a analizar se inicia
+con el valor 0 y el valor del numero mas grande de cada segmento sera 1 y las divisiones que crea seran 2, asi consecutivamente hasta 
+que ya no sea posible dividir los segmentos.
+
+Una vez con esto en mente cabe destacar dos casos 
+el caso ideal generaria un arbol con altura k tal que sumatoria(2^t) de 0 a k es igual a n
+y el peor caso posible cuando la altura maxima es n-1
+si embargo la cantidad de divisiones que se realizar siempre seran n
+esto nos deja con una situacion, el planteamiento de la solucion puede ser recursiva
+la recursividad se maneja con los dos subproblemas analizar el lado derecho y el izquierdo, el analisis es
+el mismo que el arreglo original pero con otros arreglos. 
+
