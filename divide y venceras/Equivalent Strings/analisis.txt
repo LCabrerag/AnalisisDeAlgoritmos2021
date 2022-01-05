@@ -1,19 +1,20 @@
 Explicacion:
-Se nos da dos cadenas de texto y el programa imprime "SI" si las cadenas son "equivalentes"
+  Se nos da dos cadenas de texto y el programa imprime "SI" si las cadenas son "equivalentes"
 
-Dos cadena son equivalentes si
- 1. las cadenas son iguales
- 2. las mitades izquierdas de las cadenas son equivalente y las mitades derechas de las cadenas son derechas
- 3. la mitad izquierda de la primer cadena es equivalente a la mitad derecha de la segunda cadena y
-    la mitad derecha de la primer cadena es equivalente a la mitad izquierda de la segunda cadena
+  Dos cadena son equivalentes si
+   1. las cadenas son iguales
+   2. las mitades izquierdas de las cadenas son equivalente y las mitades derechas de las cadenas son derechas
+   3. la mitad izquierda de la primer cadena es equivalente a la mitad derecha de la segunda cadena y
+      la mitad derecha de la primer cadena es equivalente a la mitad izquierda de la segunda cadena
     
     
 Analisis:
-El problema parece ser un divide y venceras, como se puede ver se tienen 3 subproblemas para saber si las cadenas son
-equivalentes, si se cumple una de estas condiciones la cadena es equivalente si cumple una de las condiciones. Sin embargo
-existe una restriccion para la condicion 2 y 3, cuando una cadena tiene longitud imṕar debido a que no se pueden dividir.
-Para la condicion 2 y 3 es necesario aplicar recursividad debido a que las subcadenas que se analizan en estas condiciones
-se analizan de la misma forma que la cadena original.
+  El problema parece ser un divide y venceras, como se puede ver se tienen 3 subproblemas para saber si las cadenas son
+  equivalentes, si se cumple una de estas condiciones la cadena es equivalente si cumple una de las condiciones. Sin embargo
+  existe una restriccion para la condicion 2 y 3, cuando una cadena tiene longitud imṕar debido a que no se pueden dividir.
+  Para la condicion 2 y 3 es necesario aplicar recursividad debido a que las subcadenas que se analizan en estas condiciones
+  se analizan de la misma forma que la cadena original.
 
 Este algoritmo es Omicron(n*log(n))
 y tiene la forma recursiva T(n) = 2T(n/2) + n/2
+donde n es el tamaño de la cadena por analizar
