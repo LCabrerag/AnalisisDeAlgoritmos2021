@@ -1,26 +1,31 @@
 Explicación:
-Se nos da los números n,a y b  y k numeros
-n representa el tamaño de un arreglo (tamaño 2^n)
-y k las posiciones del arreglo con "valor"
-a es un valor que se asignara al arreglo si no hay ningún valor
-b es un valor que se usara para asignar un valor al arreglo, el valor es b*2^n*cantidad de valores en el arreglo
+    Se nos da los números n,a y b  y k numeros
+    n representa el tamaño de un arreglo (tamaño 2^n)
+    y k las posiciones del arreglo con "valor"
+    a es un valor que se asignara al arreglo si no hay ningún valor
+    b es un valor que se usara para asignar un valor al arreglo, el valor es b*2^n*cantidad de valores en el arreglo
 
-El problema nos da la opción de partir el arreglo a la mitad y asignarle un valor a cada mitad
+    El problema nos da la opción de partir el arreglo a la mitad y asignarle un valor a cada mitad
 
-El resultado es el menor valor posible que puede tener el arreglo que se nos da
+    El resultado es el menor valor posible que puede tener el arreglo que se nos da
 
 
 Análisis:
-Este problema es una divide y vencerás, principalmente por la opción que se nos da de dividir el arreglo
-tenemos que identificar cuando es necesario dividir el arreglo para hacerlo tenemos 2 subproblemas
-el valor del arreglo actual y la suma de las divisiones del arreglo actual, al obtener las respuestas 
-es necesario comparar ambos valores y regresar el menor de los dos.
-Pero ¿Que pasa con las divisiones? las divisiones debido a que generan un nuevo arreglo que se analiza de la misma forma
-que el arreglo original, es decir, se vuelve a analizar el menor valor del arreglo proviene de la división completa
-o los arreglos generados por la división.
-Finalmente este análisis se detiene cuando el arreglo solo tenga un valor, debido a que no se puede dividir mas.
+    Este problema es una divide y vencerás, principalmente por la opción que se nos da de dividir el arreglo
+    tenemos que identificar cuando es necesario dividir el arreglo para hacerlo tenemos 2 subproblemas
+    el valor del arreglo actual y la suma de las divisiones del arreglo actual, al obtener las respuestas 
+    es necesario comparar ambos valores y regresar el menor de los dos.
+    Pero ¿Que pasa con las divisiones? las divisiones debido a que generan un nuevo arreglo que se analiza de la misma forma
+    que el arreglo original, es decir, se vuelve a analizar el menor valor del arreglo proviene de la división completa
+    o los arreglos generados por la división.
+    Finalmente este análisis se detiene cuando el arreglo solo tenga un valor, debido a que no se puede dividir mas.
 
-Aquí se cumple otra condición para ser divide y vencerás el ser recursivo.
+    Aquí se cumple otra condición para ser divide y vencerás el ser recursivo.
+
 
 De acuerdo con el analisis este algoritmo es
 O(k*(2^(n+1)-1)
+con la forma recursiva:
+2*f(n-1) + k
+donde n es el tamaño de arreglo (el mismo del problema)
+ y k la cantidad de valores en el arreglo
