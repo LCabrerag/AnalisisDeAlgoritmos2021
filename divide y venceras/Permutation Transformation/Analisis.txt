@@ -1,0 +1,11 @@
+Descripcion:
+El problema nos ofrece n numeros, cada uno de diferente valor sin un orden
+Los numeros se deben colocar en un arbol binario donde el valor de cada raiz es el numero mas grande del arreglo
+las ramas izquierda y derecha se generan con el mismo proceso con las divisiones que se generan cuando
+se elimina el elemento mas alto de la lista
+    [division izquierda][numero alto][division derecha]
+
+La salida es n numeros que indican la altura de cada numero en el arbol binario siendo la parte mas alta 0
+
+
+Analisis:
