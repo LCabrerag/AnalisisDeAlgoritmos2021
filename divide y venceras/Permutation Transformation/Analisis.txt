@@ -26,3 +26,5 @@ esto nos deja con una situacion, el planteamiento de la solucion puede ser recur
 la recursividad se maneja con los dos subproblemas analizar el lado derecho y el izquierdo, el analisis es
 el mismo que el arreglo original pero con otros arreglos. 
 
+Este es algoritmo de forma recursiva tiene la forma
+T(n) = 2*T((n-1)/2) + n
